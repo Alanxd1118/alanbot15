@@ -79,11 +79,12 @@ const question = (text) => new Promise((resolve) => rl.question(text, resolve))
 async function startXeonBotInc() {
 let { version, isLatest } = await fetchLatestBaileysVersion()
 const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
-    const msgRetryCounterCache = new NodeCache() // for retry message, "waiting message"
+    const msgRetryCounterCache = new NodeCache()
     const XeonBotInc = makeWASocket({
         logger: pino({ level: 'silent' }),
-        printQRInTerminal: !pairingCode, // popping up QR in terminal log
-      browser: ['Mac OS', 'chrome', '121.0.6167.159'], // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
+        printQRInTerminal: !pairingCode,
+      browser: ['Mac OS', 'chrome', '121.0.6167.159'],
+      version: [2, 3000, 1013812660],
       patchMessageBeforeSending: (message) => {
             const requiresPatch = !!(
                 message.buttonsMessage ||
