@@ -17,7 +17,7 @@ global.location = "India, Mizoram, Aizawl" //ur location
 
 //new
 global.botname = '฿ł₴◦ⱧØ₱' //ur bot name
-global.ownernumber = '94764979574' //ur owner number
+global.ownernumber = '94740352885' //ur owner number
 global.ownername = '฿ł₴◦ⱧØ₱' //ur owner name
 global.websitex = ""
 global.wagc = ""
